@@ -1,0 +1,87 @@
+#ROCK , PAPER , SCISSORS
+import random
+
+#ASK THE USER TO CHOOSE B/W ROCK ,PAPER and SCISSOR
+ask = input("Rock , Paper or Scissor?").lower()
+print(ask)
+print("USER CHOOSES")
+if ask=="rock":
+ print("""
+       ,--.--._
+------" _, \___)
+        / _/____)
+        \//(____)
+------\     (__)
+       `-----"
+      """)
+elif ask=="paper":
+ print("""
+ 
+           ___..__
+  __..--"" ._ __.'
+              "-..__
+            '"--..__";
+ ___        '--...__"";
+    `-..__ '"---..._;"
+          ""----'    
+ """)
+elif ask=="scissor":
+ print("""
+    .-.  _
+    | | / )
+    | |/ /
+   _|__ /_
+  / __)-' )
+  \  `(.-')
+   > ._>-'
+ """)
+else:
+    print("NOOB!")
+
+outputs=["rock","paper","scissor"]
+comp_output=random.choice(outputs)
+print("COMPUTER CHOOSES:")
+if comp_output== "rock":
+    print("""
+       ,--.--._
+------" _, \___)
+        / _/____)
+        \//(____)
+------\     (__)
+       `-----"
+      """)
+elif comp_output== "paper":
+    print("""
+
+           ___..__
+  __..--"" ._ __.'
+              "-..__
+            '"--..__";
+ ___        '--...__"";
+    `-..__ '"---..._;"
+          ""----'    
+
+  """)
+else:
+    print("""
+    .-.  _
+    | | / )
+    | |/ /
+   _|__ /_
+  / __)-' )
+  \  `(.-')
+   > ._>-'
+ """)
+
+if ask==comp_output:
+    print("TIE")
+elif ask=="rock" and comp_output=="paper":
+    print("COMP WINS")
+elif ask=="paper" and comp_output=="scissor":
+    print("COMP WINS")
+elif ask=="scissor" and comp_output==("rock"):
+    print("COMP WINS")
+else:
+    print("YOU WIN")
+
+print("GAME OVER!")
